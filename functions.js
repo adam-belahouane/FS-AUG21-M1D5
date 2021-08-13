@@ -56,45 +56,77 @@ console.log(crazyDiff(25))
 /* EXERCISE 4
 Write a function "boundary" which accept an integer n and returns true if n is within 20 and 100 (included) or if it's equal to 400.
 */
+writeHeader("EXERCISE 4")
 
-/* WRITE YOUR CODE HERE */
+const boundary = function(intN) {
+    if((20 <= intN && intN <= 100) || (intN === 400)) {
+        return true
+    } else {
+        return false
+    }
+}
+console.log(boundary(45))
+console.log(boundary(15))
+console.log(boundary(120))
+console.log(boundary(400))
 
 /* EXERCISE 5
 Write a function "strivify" which accepts a string.
 It should add the word "Strive" in front of the given string, but if the given string already begins with "Strive", then it should just return the original string.
 */
+writeHeader("EXERCISE 5")
 
-/* WRITE YOUR CODE HERE */
+const strivify = function(givenString) {
+    if(givenString === "Strive"){
+        return givenString
+    } else {
+        return "Strive" + givenString
+    }
+}
+console.log(strivify("Strive"))
+console.log(strivify("Adam"))
 
 /* EXERCISE 6
 Write a function "check3and7" which accepts a positive number and check if it is a multiple of 3 or a multiple of 7.
 HINT: Module Operator
 */
-
-/* WRITE YOUR CODE HERE */
+writeHeader("EXERCISE 6")
+const check3and7 = function(posNumber) {
+    if(posNumber % 3 === 0 || posNumber % 7 === 0) {
+        return true
+    } else{
+        return false 
+    }
+}
+console.log(check3and7(9))
+console.log(check3and7(14))
+console.log(check3and7(16))
 
 /* EXERCISE 7
 Write a function "reverseString" to programmatically reverse a given string (es.: Strive => evirtS).
 */
-
-/* WRITE YOUR CODE HERE */
-
+writeHeader("EXERCISE 7")
+const reverseString = function(normalString){
+    return normalString.split("").reverse().join("");
+}
+console.log(reverseString("Strive"))
 /* EXERCISE 8
 Write a function "upperFirst" to capitalize the first letter of each word of a given string passed as a parameter.
 */
-
-/* WRITE YOUR CODE HERE */
+writeHeader("EXERCISE 8")
 
 /* EXERCISE 9
 Write a function "cutString" to create a new string without the first and last character of a given string.
 */
-
-/* WRITE YOUR CODE HERE */
+writeHeader("EXERCISE 9")
+const cutString = function(str) {
+    let result = str.slice 
+}
 
 /* EXERCISE 10
 Write a function "giveMeRandom" which accepts a number n and returns an array containing n random numbers between 0 and 10.
 */
-
+writeHeader("EXERCISE 10")
 /* WRITE YOUR CODE HERE */
 
 /* WHEN YOU ARE FINISHED
