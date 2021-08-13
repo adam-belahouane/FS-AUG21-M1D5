@@ -59,11 +59,12 @@ Write a function "boundary" which accept an integer n and returns true if n is w
 writeHeader("EXERCISE 4")
 
 const boundary = function(intN) {
-    if((20 <= intN && intN <= 100) || (intN === 400)) {
+    
+     if((20 <= intN && intN <= 100) || (intN === 400)) {
         return true
-    } else {
+     } else {
         return false
-    }
+     }
 }
 console.log(boundary(45))
 console.log(boundary(15))
@@ -107,21 +108,32 @@ Write a function "reverseString" to programmatically reverse a given string (es.
 */
 writeHeader("EXERCISE 7")
 const reverseString = function(normalString){
-    return normalString.split("").reverse().join("");
+    return normalString.split("").reverse().join("")
 }
 console.log(reverseString("Strive"))
 /* EXERCISE 8
 Write a function "upperFirst" to capitalize the first letter of each word of a given string passed as a parameter.
 */
 writeHeader("EXERCISE 8")
-
+function upperFirst(stringUpperCase) {
+    let words = stringUpperCase.toLowerCase().split(" ");
+  
+    for (let i = 0; i < words.length; i++) {
+      words[i] =
+        words[i].charAt(0).toUpperCase() +
+        words[i].substring(1);
+    }
+    // Directly return the joined string
+    return words.join(" ");
+  }
+  console.log(upperFirst("hi my name is adam"))
 /* EXERCISE 9
 Write a function "cutString" to create a new string without the first and last character of a given string.
 */
 writeHeader("EXERCISE 9")
 const cutString = function(str) {
-    let result = str.slice(1,str.length -1)
-    return result
+    return str.slice(1,str.length -1)
+    //return result
 }
 console.log(cutString("hello"))
 
